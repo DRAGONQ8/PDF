@@ -1,0 +1,600 @@
+{
+  "timestamp": "2026-10-19T00:25:35.388Z",
+  "mode": "production index.html",
+  "chromium": "154.0.8037.57",
+  "playwright": "1.62.1",
+  "cdn": "Live CDN",
+  "physicalDeviceTesting": false,
+  "bootMs": 372,
+  "passed": 44,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Arabic RTL shell and dependency laziness",
+      "status": "passed",
+      "durationMs": 2,
+      "detail": {
+        "bootMs": 372,
+        "toolCount": 27
+      }
+    },
+    {
+      "name": "PNG → JPEG: valid encoding, Arabic filename",
+      "status": "passed",
+      "durationMs": 50,
+      "detail": {
+        "width": 640,
+        "height": 480,
+        "type": "image/jpeg",
+        "name": "صورة عربية-محول.jpg",
+        "bytes": [
+          255,
+          216,
+          255
+        ]
+      }
+    },
+    {
+      "name": "PNG → WebP: reopen actual image",
+      "status": "passed",
+      "durationMs": 42,
+      "detail": {
+        "width": 640,
+        "height": 480,
+        "type": "image/webp",
+        "signature": "WEBP"
+      }
+    },
+    {
+      "name": "Image resize, rotation, crop, compression and batch",
+      "status": "passed",
+      "durationMs": 138,
+      "detail": {
+        "resized": {
+          "width": 160,
+          "height": 120
+        },
+        "rotated": {
+          "width": 480,
+          "height": 640
+        },
+        "crop": {
+          "width": 100,
+          "height": 80
+        },
+        "low": 2984,
+        "high": 14983,
+        "batch": 2
+      }
+    },
+    {
+      "name": "Multiple images → PDF: parse all pages",
+      "status": "passed",
+      "durationMs": 149,
+      "detail": {
+        "pages": 2,
+        "size": 12046,
+        "type": "application/pdf"
+      }
+    },
+    {
+      "name": "PDF merge: preserves input/page order",
+      "status": "passed",
+      "durationMs": 15,
+      "detail": {
+        "pages": 3,
+        "widths": [
+          310,
+          320,
+          330
+        ]
+      }
+    },
+    {
+      "name": "PDF split and extract: parse generated outputs",
+      "status": "passed",
+      "durationMs": 34,
+      "detail": {
+        "widths": [
+          [
+            310
+          ],
+          [
+            320
+          ],
+          [
+            330
+          ]
+        ],
+        "groupCounts": [
+          2,
+          1
+        ],
+        "extractedWidths": [
+          330,
+          310
+        ]
+      }
+    },
+    {
+      "name": "PDF delete, reorder and rotate: validated page structures",
+      "status": "passed",
+      "durationMs": 13,
+      "detail": {
+        "deleted": [
+          {
+            "width": 310,
+            "rotation": 0
+          },
+          {
+            "width": 330,
+            "rotation": 0
+          }
+        ],
+        "reordered": [
+          {
+            "width": 330,
+            "rotation": 0
+          },
+          {
+            "width": 310,
+            "rotation": 0
+          },
+          {
+            "width": 320,
+            "rotation": 0
+          }
+        ],
+        "rotated": [
+          {
+            "width": 310,
+            "rotation": 0
+          },
+          {
+            "width": 320,
+            "rotation": 90
+          },
+          {
+            "width": 330,
+            "rotation": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "PDF rendering and embedded text extraction",
+      "status": "passed",
+      "durationMs": 409,
+      "detail": {
+        "text": "Embedded test text",
+        "dimensions": {
+          "width": 401,
+          "height": 566
+        },
+        "pages": 1
+      }
+    },
+    {
+      "name": "Malformed and empty PDF fail with Arabic errors",
+      "status": "passed",
+      "durationMs": 7,
+      "detail": [
+        "تعذرت قراءة ملف PDF. قد يكون تالفًا أو يستخدم بنية غير مدعومة؛ جرّب فتحه في قارئ PDF وتصدير نسخة جديدة.",
+        "ملف PDF فارغ؛ اختر ملفًا يحتوي على صفحات."
+      ]
+    },
+    {
+      "name": "ZIP creation/extraction: UTF-8 filenames and byte equality",
+      "status": "passed",
+      "durationMs": 105,
+      "detail": {
+        "count": 2,
+        "names": [
+          "مجلد/رسالة عربية.txt",
+          "مجلد/binary.bin"
+        ]
+      }
+    },
+    {
+      "name": "ZIP selected extraction and rebundling",
+      "status": "passed",
+      "durationMs": 13,
+      "detail": {
+        "selectedCount": 1,
+        "repackedCount": 1
+      }
+    },
+    {
+      "name": "ZIP security: traversal, decompressed-size and entry limits",
+      "status": "passed",
+      "durationMs": 18,
+      "detail": [
+        "يحتوي الأرشيف على مسار غير آمن أو غير قابل للحفظ.",
+        "حجم الأرشيف يتجاوز حد الأمان المضبوط في الإعدادات.",
+        "عدد عناصر الأرشيف يتجاوز حد الأمان أو لا يطابق بنية الملف."
+      ]
+    },
+    {
+      "name": "CSV → JSON: BOM, quotes, embedded commas/newlines, delimiter detection",
+      "status": "passed",
+      "durationMs": 24,
+      "detail": {
+        "rows": 2
+      }
+    },
+    {
+      "name": "JSON → CSV round trip and spreadsheet formula protection",
+      "status": "passed",
+      "durationMs": 4,
+      "detail": {
+        "rows": 2
+      }
+    },
+    {
+      "name": "JSON validation and corrupt CSV rejection",
+      "status": "passed",
+      "durationMs": 3,
+      "detail": [
+        "بيانات JSON غير صالحة. تحقق من الأقواس والفواصل وعلامات الاقتباس.",
+        "صياغة CSV غير صالحة: حقل مقتبس لم يُغلق."
+      ]
+    },
+    {
+      "name": "SHA-256: known vectors, streaming boundary and duplicate content",
+      "status": "passed",
+      "durationMs": 46,
+      "detail": {
+        "knownVectors": 3
+      }
+    },
+    {
+      "name": "Base64 binary round trip and invalid input rejection",
+      "status": "passed",
+      "durationMs": 4,
+      "detail": {
+        "bytes": [
+          0,
+          255,
+          1,
+          128,
+          7
+        ],
+        "rejected": true,
+        "name": "مستعاد.bin"
+      }
+    },
+    {
+      "name": "XML validation and inert uploaded HTML",
+      "status": "passed",
+      "durationMs": 5,
+      "detail": {
+        "html": "نص آمن",
+        "dtdRejected": true
+      }
+    },
+    {
+      "name": "Image errors: corrupt, empty, unsupported and long filenames",
+      "status": "passed",
+      "durationMs": 18,
+      "detail": {
+        "errors": [
+          "محتوى الملف ليس صورة مدعومة. تحقّق من الصيغة أو من سلامة الملف.",
+          "الصورة فارغة أو غير قابلة للقراءة.",
+          "محتوى الملف ليس صورة مدعومة. تحقّق من الصيغة أو من سلامة الملف."
+        ],
+        "filenameLength": 130
+      }
+    },
+    {
+      "name": "Cancellation before processing: no output is returned",
+      "status": "passed",
+      "durationMs": 2,
+      "detail": [
+        "AbortError",
+        "AbortError",
+        "AbortError",
+        "AbortError"
+      ]
+    },
+    {
+      "name": "Image pixels: flip, JPEG background, inert SVG and EXIF orientation",
+      "status": "passed",
+      "durationMs": 18,
+      "detail": {
+        "flip": {
+          "width": 4,
+          "height": 2,
+          "p": [
+            0,
+            0,
+            255,
+            255
+          ]
+        },
+        "background": {
+          "width": 4,
+          "height": 2,
+          "p": [
+            0,
+            255,
+            1,
+            255
+          ]
+        },
+        "svg": {
+          "width": 20,
+          "height": 10,
+          "p": [
+            255,
+            0,
+            0,
+            255
+          ]
+        },
+        "svgExecuted": false,
+        "oriented": {
+          "width": 50,
+          "height": 100
+        }
+      }
+    },
+    {
+      "name": "ZIP corrupted CRC is rejected during extraction",
+      "status": "passed",
+      "durationMs": 5,
+      "detail": "فشل التحقق من حجم الملف أو بصمته CRC32. الأرشيف تالف."
+    },
+    {
+      "name": "Audio: inspect, trim, adjust gain and reopen PCM WAV",
+      "status": "passed",
+      "durationMs": 102,
+      "detail": {
+        "before": 2,
+        "after": 1,
+        "bytes": 88244,
+        "rate": 44100,
+        "maximum": 5000
+      }
+    },
+    {
+      "name": "Video: native inspection and exact frame capture",
+      "status": "passed",
+      "durationMs": 50,
+      "detail": {
+        "duration": 2,
+        "width": 160,
+        "height": 90,
+        "invalidRejected": true
+      }
+    },
+    {
+      "name": "ZIP keeps legitimate empty entries and rejects conflicting names",
+      "status": "passed",
+      "durationMs": 12,
+      "detail": {
+        "emptyBytes": 0,
+        "allowEmpty": true,
+        "duplicateRejected": true
+      }
+    },
+    {
+      "name": "Text statistics, literal search, merge, split and encoding conversion",
+      "status": "passed",
+      "durationMs": 8,
+      "detail": {
+        "parts": 2,
+        "encoding": "مرحبا"
+      }
+    },
+    {
+      "name": "Arabic embedded PDF text: preserve words and render page",
+      "status": "passed",
+      "durationMs": 333,
+      "detail": {
+        "text": "نص عربي لاختبار معالجة المستندات",
+        "dimensions": {
+          "width": 401,
+          "height": 566
+        }
+      }
+    },
+    {
+      "name": "Legacy/UTF-16 intake exposes encoding conversion with the correct default",
+      "status": "passed",
+      "durationMs": 256,
+      "detail": {
+        "encodings": [
+          "windows-1256",
+          "utf-16le",
+          "utf-16be"
+        ],
+        "text": "مرحبا",
+        "modalDefault": "utf-16le"
+      }
+    },
+    {
+      "name": "Real upload → configure → process → valid browser download",
+      "status": "passed",
+      "durationMs": 212,
+      "detail": {
+        "suggestedFilename": "بيانات عربية-منسق.json"
+      }
+    },
+    {
+      "name": "Output filename editing survives queue rendering and corrects extension",
+      "status": "passed",
+      "durationMs": 86,
+      "detail": {
+        "correctedName": "اسم يدوي.json"
+      }
+    },
+    {
+      "name": "Queue progress keeps completed outputs and file-list DOM stable",
+      "status": "passed",
+      "durationMs": 19,
+      "detail": {
+        "fileStable": true,
+        "outputStable": true
+      }
+    },
+    {
+      "name": "Image exact-size controls produce the requested output dimensions",
+      "status": "passed",
+      "durationMs": 1557,
+      "detail": {
+        "width": 120,
+        "height": 60
+      }
+    },
+    {
+      "name": "Queue deduplicates maximal-length output names without losing extension",
+      "status": "passed",
+      "durationMs": 30,
+      "detail": {
+        "lengths": [
+          117,
+          118
+        ],
+        "unique": true
+      }
+    },
+    {
+      "name": "Queue cancellation during streaming work and queued execution",
+      "status": "passed",
+      "durationMs": 50,
+      "detail": {
+        "state": "cancelled"
+      }
+    },
+    {
+      "name": "Mobile/tablet responsive layout, orientation and RTL stability",
+      "status": "passed",
+      "durationMs": 1325,
+      "detail": {
+        "viewports": 5
+      }
+    },
+    {
+      "name": "Keyboard navigation and modal dismissal",
+      "status": "passed",
+      "durationMs": 110,
+      "detail": {
+        "keyboardFocusedTag": "BUTTON"
+      }
+    },
+    {
+      "name": "Binary recognition overrides misleading extension and MIME",
+      "status": "passed",
+      "durationMs": 5,
+      "detail": {
+        "kind": "image",
+        "warnings": [
+          "الامتداد لا يطابق المحتوى المكتشف؛ تُقترح الأدوات حسب المحتوى.",
+          "نوع المتصفح يختلف عن توقيع المحتوى."
+        ],
+        "width": 640,
+        "unknown": "unknown",
+        "emptyKind": "empty",
+        "emptyWarnings": [
+          "الملف فارغ؛ تتاح أدوات الفحص والبصمة فقط."
+        ]
+      }
+    },
+    {
+      "name": "Batch browser download: ZIP has unique valid image results",
+      "status": "passed",
+      "durationMs": 372,
+      "detail": {
+        "count": 4,
+        "images": 2
+      }
+    },
+    {
+      "name": "Queue supports valid empty ZIP entries and sequential jobs",
+      "status": "passed",
+      "durationMs": 42,
+      "detail": [
+        {
+          "state": "completed",
+          "bytes": 0
+        },
+        {
+          "state": "completed",
+          "bytes": 116
+        }
+      ]
+    },
+    {
+      "name": "Theme/preferences persist; private file contents do not persist",
+      "status": "passed",
+      "durationMs": 381,
+      "detail": {
+        "quality": 0.77,
+        "privateFilesAfterReload": 0
+      }
+    },
+    {
+      "name": "Failed dependency loading: Arabic error, retry does not reuse rejection",
+      "status": "passed",
+      "durationMs": 387,
+      "detail": [
+        "تعذّر تحميل مكتبة pdf-lib. يتطلب الاستخدام الأول اتصالًا بالإنترنت، وقد يمنع المتصفح التحميل المحلي. افتح التطبيق عبر HTTPS وأعد المحاولة.",
+        "تعذّر تحميل مكتبة pdf-lib. يتطلب الاستخدام الأول اتصالًا بالإنترنت، وقد يمنع المتصفح التحميل المحلي. افتح التطبيق عبر HTTPS وأعد المحاولة."
+      ]
+    },
+    {
+      "name": "Uploaded HTML/SVG cannot request remote private resources; no file uploads",
+      "status": "passed",
+      "durationMs": 0
+    },
+    {
+      "name": "No uncaught browser exceptions",
+      "status": "passed",
+      "durationMs": 0
+    }
+  ],
+  "environment": {
+    "platform": "linux",
+    "release": "6.18.55",
+    "architecture": "x64",
+    "node": "v24.19.0",
+    "browserExecutable": "/usr/bin/chromium",
+    "headless": true,
+    "serving": "HTTP on 127.0.0.1 with a static Node test server",
+    "viewportTests": [
+      {
+        "width": 360,
+        "height": 800
+      },
+      {
+        "width": 412,
+        "height": 915
+      },
+      {
+        "width": 915,
+        "height": 412
+      },
+      {
+        "width": 800,
+        "height": 1280
+      },
+      {
+        "width": 1280,
+        "height": 800
+      }
+    ],
+    "physicalAndroidDevice": false,
+    "touchHardwareEmulation": false
+  },
+  "measurementNotes": "Single headless workstation run; bootMs measures navigation through tool-registry readiness. No CPU throttling, peak-memory measurement, or physical Samsung/Android testing.",
+  "fileProtocolVerification": {
+    "status": "blocked-by-test-environment",
+    "error": "Chromium net::ERR_BLOCKED_BY_ADMINISTRATOR when navigating to file:///workspace/PDF/index.html",
+    "note": "The browser blocked navigation before the application could load. Core engine tests and the full interface were verified over local HTTP."
+  },
+  "testedArtifact": {
+    "filename": "index.html",
+    "bytes": 246907,
+    "sha256": "86d7cd0f30b6528d654353af7c0dad1b50d1641d29cec791e86ec7cc65abd20c"
+  }
+}
