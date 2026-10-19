@@ -439,6 +439,8 @@ const requests = [];
       await encodingPage.goto(origin, { waitUntil: 'load' });
       await encodingPage.locator('#file-input').setInputFiles([{ name: 'ترميز UTF16.txt', mimeType: 'text/plain', buffer: Buffer.from([255, 254, 0x45, 6, 0x31, 6, 0x2d, 6, 0x28, 6, 0x27, 6]) }]);
       await encodingPage.waitForFunction(() => Hub.state.files.some(r => r.encoding === 'utf-16le'));
+      // V2 recommendations are intentionally curated; every tool remains in the library.
+      await encodingPage.locator('[data-view="tools"]:visible').first().click();
       await encodingPage.locator('[data-tool="text-encoding"]').first().click();
       assert.equal(await encodingPage.locator('#option-encoding').inputValue(), 'utf-16le');
       await encodingPage.close();
@@ -483,7 +485,7 @@ const requests = [];
         await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         return { fileStable: document.querySelector('#file-list').firstElementChild === fileNode, outputStable: document.querySelector('[data-output-name]') === outputNode };
       });
-      assert.equal(result.fileStable, true); assert.equal(result.outputStable, true); return result;
+      assert.equal(result.fileStable, true, JSON.stringify(result)); assert.equal(result.outputStable, true, JSON.stringify(result)); return result;
     });
     await test('Image exact-size controls produce the requested output dimensions', async () => {
       const png = await evaluate(async () => [...new Uint8Array(await __qa.files['صورة عربية.png'].arrayBuffer())]);

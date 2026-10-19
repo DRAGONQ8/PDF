@@ -1,558 +1,13 @@
 {
-  "timestamp": "2026-10-19T00:25:35.388Z",
-  "mode": "production index.html",
+  "timestamp": "2026-10-19T00:55:42.954Z",
+  "mode": "AI Transform Hub V2: full preserved baseline and extension regression suites",
+  "passed": 92,
+  "failed": 0,
   "chromium": "154.0.8037.57",
   "playwright": "1.62.1",
   "cdn": "Live CDN",
+  "bootMs": 322,
   "physicalDeviceTesting": false,
-  "bootMs": 372,
-  "passed": 44,
-  "failed": 0,
-  "results": [
-    {
-      "name": "Arabic RTL shell and dependency laziness",
-      "status": "passed",
-      "durationMs": 2,
-      "detail": {
-        "bootMs": 372,
-        "toolCount": 27
-      }
-    },
-    {
-      "name": "PNG → JPEG: valid encoding, Arabic filename",
-      "status": "passed",
-      "durationMs": 50,
-      "detail": {
-        "width": 640,
-        "height": 480,
-        "type": "image/jpeg",
-        "name": "صورة عربية-محول.jpg",
-        "bytes": [
-          255,
-          216,
-          255
-        ]
-      }
-    },
-    {
-      "name": "PNG → WebP: reopen actual image",
-      "status": "passed",
-      "durationMs": 42,
-      "detail": {
-        "width": 640,
-        "height": 480,
-        "type": "image/webp",
-        "signature": "WEBP"
-      }
-    },
-    {
-      "name": "Image resize, rotation, crop, compression and batch",
-      "status": "passed",
-      "durationMs": 138,
-      "detail": {
-        "resized": {
-          "width": 160,
-          "height": 120
-        },
-        "rotated": {
-          "width": 480,
-          "height": 640
-        },
-        "crop": {
-          "width": 100,
-          "height": 80
-        },
-        "low": 2984,
-        "high": 14983,
-        "batch": 2
-      }
-    },
-    {
-      "name": "Multiple images → PDF: parse all pages",
-      "status": "passed",
-      "durationMs": 149,
-      "detail": {
-        "pages": 2,
-        "size": 12046,
-        "type": "application/pdf"
-      }
-    },
-    {
-      "name": "PDF merge: preserves input/page order",
-      "status": "passed",
-      "durationMs": 15,
-      "detail": {
-        "pages": 3,
-        "widths": [
-          310,
-          320,
-          330
-        ]
-      }
-    },
-    {
-      "name": "PDF split and extract: parse generated outputs",
-      "status": "passed",
-      "durationMs": 34,
-      "detail": {
-        "widths": [
-          [
-            310
-          ],
-          [
-            320
-          ],
-          [
-            330
-          ]
-        ],
-        "groupCounts": [
-          2,
-          1
-        ],
-        "extractedWidths": [
-          330,
-          310
-        ]
-      }
-    },
-    {
-      "name": "PDF delete, reorder and rotate: validated page structures",
-      "status": "passed",
-      "durationMs": 13,
-      "detail": {
-        "deleted": [
-          {
-            "width": 310,
-            "rotation": 0
-          },
-          {
-            "width": 330,
-            "rotation": 0
-          }
-        ],
-        "reordered": [
-          {
-            "width": 330,
-            "rotation": 0
-          },
-          {
-            "width": 310,
-            "rotation": 0
-          },
-          {
-            "width": 320,
-            "rotation": 0
-          }
-        ],
-        "rotated": [
-          {
-            "width": 310,
-            "rotation": 0
-          },
-          {
-            "width": 320,
-            "rotation": 90
-          },
-          {
-            "width": 330,
-            "rotation": 0
-          }
-        ]
-      }
-    },
-    {
-      "name": "PDF rendering and embedded text extraction",
-      "status": "passed",
-      "durationMs": 409,
-      "detail": {
-        "text": "Embedded test text",
-        "dimensions": {
-          "width": 401,
-          "height": 566
-        },
-        "pages": 1
-      }
-    },
-    {
-      "name": "Malformed and empty PDF fail with Arabic errors",
-      "status": "passed",
-      "durationMs": 7,
-      "detail": [
-        "تعذرت قراءة ملف PDF. قد يكون تالفًا أو يستخدم بنية غير مدعومة؛ جرّب فتحه في قارئ PDF وتصدير نسخة جديدة.",
-        "ملف PDF فارغ؛ اختر ملفًا يحتوي على صفحات."
-      ]
-    },
-    {
-      "name": "ZIP creation/extraction: UTF-8 filenames and byte equality",
-      "status": "passed",
-      "durationMs": 105,
-      "detail": {
-        "count": 2,
-        "names": [
-          "مجلد/رسالة عربية.txt",
-          "مجلد/binary.bin"
-        ]
-      }
-    },
-    {
-      "name": "ZIP selected extraction and rebundling",
-      "status": "passed",
-      "durationMs": 13,
-      "detail": {
-        "selectedCount": 1,
-        "repackedCount": 1
-      }
-    },
-    {
-      "name": "ZIP security: traversal, decompressed-size and entry limits",
-      "status": "passed",
-      "durationMs": 18,
-      "detail": [
-        "يحتوي الأرشيف على مسار غير آمن أو غير قابل للحفظ.",
-        "حجم الأرشيف يتجاوز حد الأمان المضبوط في الإعدادات.",
-        "عدد عناصر الأرشيف يتجاوز حد الأمان أو لا يطابق بنية الملف."
-      ]
-    },
-    {
-      "name": "CSV → JSON: BOM, quotes, embedded commas/newlines, delimiter detection",
-      "status": "passed",
-      "durationMs": 24,
-      "detail": {
-        "rows": 2
-      }
-    },
-    {
-      "name": "JSON → CSV round trip and spreadsheet formula protection",
-      "status": "passed",
-      "durationMs": 4,
-      "detail": {
-        "rows": 2
-      }
-    },
-    {
-      "name": "JSON validation and corrupt CSV rejection",
-      "status": "passed",
-      "durationMs": 3,
-      "detail": [
-        "بيانات JSON غير صالحة. تحقق من الأقواس والفواصل وعلامات الاقتباس.",
-        "صياغة CSV غير صالحة: حقل مقتبس لم يُغلق."
-      ]
-    },
-    {
-      "name": "SHA-256: known vectors, streaming boundary and duplicate content",
-      "status": "passed",
-      "durationMs": 46,
-      "detail": {
-        "knownVectors": 3
-      }
-    },
-    {
-      "name": "Base64 binary round trip and invalid input rejection",
-      "status": "passed",
-      "durationMs": 4,
-      "detail": {
-        "bytes": [
-          0,
-          255,
-          1,
-          128,
-          7
-        ],
-        "rejected": true,
-        "name": "مستعاد.bin"
-      }
-    },
-    {
-      "name": "XML validation and inert uploaded HTML",
-      "status": "passed",
-      "durationMs": 5,
-      "detail": {
-        "html": "نص آمن",
-        "dtdRejected": true
-      }
-    },
-    {
-      "name": "Image errors: corrupt, empty, unsupported and long filenames",
-      "status": "passed",
-      "durationMs": 18,
-      "detail": {
-        "errors": [
-          "محتوى الملف ليس صورة مدعومة. تحقّق من الصيغة أو من سلامة الملف.",
-          "الصورة فارغة أو غير قابلة للقراءة.",
-          "محتوى الملف ليس صورة مدعومة. تحقّق من الصيغة أو من سلامة الملف."
-        ],
-        "filenameLength": 130
-      }
-    },
-    {
-      "name": "Cancellation before processing: no output is returned",
-      "status": "passed",
-      "durationMs": 2,
-      "detail": [
-        "AbortError",
-        "AbortError",
-        "AbortError",
-        "AbortError"
-      ]
-    },
-    {
-      "name": "Image pixels: flip, JPEG background, inert SVG and EXIF orientation",
-      "status": "passed",
-      "durationMs": 18,
-      "detail": {
-        "flip": {
-          "width": 4,
-          "height": 2,
-          "p": [
-            0,
-            0,
-            255,
-            255
-          ]
-        },
-        "background": {
-          "width": 4,
-          "height": 2,
-          "p": [
-            0,
-            255,
-            1,
-            255
-          ]
-        },
-        "svg": {
-          "width": 20,
-          "height": 10,
-          "p": [
-            255,
-            0,
-            0,
-            255
-          ]
-        },
-        "svgExecuted": false,
-        "oriented": {
-          "width": 50,
-          "height": 100
-        }
-      }
-    },
-    {
-      "name": "ZIP corrupted CRC is rejected during extraction",
-      "status": "passed",
-      "durationMs": 5,
-      "detail": "فشل التحقق من حجم الملف أو بصمته CRC32. الأرشيف تالف."
-    },
-    {
-      "name": "Audio: inspect, trim, adjust gain and reopen PCM WAV",
-      "status": "passed",
-      "durationMs": 102,
-      "detail": {
-        "before": 2,
-        "after": 1,
-        "bytes": 88244,
-        "rate": 44100,
-        "maximum": 5000
-      }
-    },
-    {
-      "name": "Video: native inspection and exact frame capture",
-      "status": "passed",
-      "durationMs": 50,
-      "detail": {
-        "duration": 2,
-        "width": 160,
-        "height": 90,
-        "invalidRejected": true
-      }
-    },
-    {
-      "name": "ZIP keeps legitimate empty entries and rejects conflicting names",
-      "status": "passed",
-      "durationMs": 12,
-      "detail": {
-        "emptyBytes": 0,
-        "allowEmpty": true,
-        "duplicateRejected": true
-      }
-    },
-    {
-      "name": "Text statistics, literal search, merge, split and encoding conversion",
-      "status": "passed",
-      "durationMs": 8,
-      "detail": {
-        "parts": 2,
-        "encoding": "مرحبا"
-      }
-    },
-    {
-      "name": "Arabic embedded PDF text: preserve words and render page",
-      "status": "passed",
-      "durationMs": 333,
-      "detail": {
-        "text": "نص عربي لاختبار معالجة المستندات",
-        "dimensions": {
-          "width": 401,
-          "height": 566
-        }
-      }
-    },
-    {
-      "name": "Legacy/UTF-16 intake exposes encoding conversion with the correct default",
-      "status": "passed",
-      "durationMs": 256,
-      "detail": {
-        "encodings": [
-          "windows-1256",
-          "utf-16le",
-          "utf-16be"
-        ],
-        "text": "مرحبا",
-        "modalDefault": "utf-16le"
-      }
-    },
-    {
-      "name": "Real upload → configure → process → valid browser download",
-      "status": "passed",
-      "durationMs": 212,
-      "detail": {
-        "suggestedFilename": "بيانات عربية-منسق.json"
-      }
-    },
-    {
-      "name": "Output filename editing survives queue rendering and corrects extension",
-      "status": "passed",
-      "durationMs": 86,
-      "detail": {
-        "correctedName": "اسم يدوي.json"
-      }
-    },
-    {
-      "name": "Queue progress keeps completed outputs and file-list DOM stable",
-      "status": "passed",
-      "durationMs": 19,
-      "detail": {
-        "fileStable": true,
-        "outputStable": true
-      }
-    },
-    {
-      "name": "Image exact-size controls produce the requested output dimensions",
-      "status": "passed",
-      "durationMs": 1557,
-      "detail": {
-        "width": 120,
-        "height": 60
-      }
-    },
-    {
-      "name": "Queue deduplicates maximal-length output names without losing extension",
-      "status": "passed",
-      "durationMs": 30,
-      "detail": {
-        "lengths": [
-          117,
-          118
-        ],
-        "unique": true
-      }
-    },
-    {
-      "name": "Queue cancellation during streaming work and queued execution",
-      "status": "passed",
-      "durationMs": 50,
-      "detail": {
-        "state": "cancelled"
-      }
-    },
-    {
-      "name": "Mobile/tablet responsive layout, orientation and RTL stability",
-      "status": "passed",
-      "durationMs": 1325,
-      "detail": {
-        "viewports": 5
-      }
-    },
-    {
-      "name": "Keyboard navigation and modal dismissal",
-      "status": "passed",
-      "durationMs": 110,
-      "detail": {
-        "keyboardFocusedTag": "BUTTON"
-      }
-    },
-    {
-      "name": "Binary recognition overrides misleading extension and MIME",
-      "status": "passed",
-      "durationMs": 5,
-      "detail": {
-        "kind": "image",
-        "warnings": [
-          "الامتداد لا يطابق المحتوى المكتشف؛ تُقترح الأدوات حسب المحتوى.",
-          "نوع المتصفح يختلف عن توقيع المحتوى."
-        ],
-        "width": 640,
-        "unknown": "unknown",
-        "emptyKind": "empty",
-        "emptyWarnings": [
-          "الملف فارغ؛ تتاح أدوات الفحص والبصمة فقط."
-        ]
-      }
-    },
-    {
-      "name": "Batch browser download: ZIP has unique valid image results",
-      "status": "passed",
-      "durationMs": 372,
-      "detail": {
-        "count": 4,
-        "images": 2
-      }
-    },
-    {
-      "name": "Queue supports valid empty ZIP entries and sequential jobs",
-      "status": "passed",
-      "durationMs": 42,
-      "detail": [
-        {
-          "state": "completed",
-          "bytes": 0
-        },
-        {
-          "state": "completed",
-          "bytes": 116
-        }
-      ]
-    },
-    {
-      "name": "Theme/preferences persist; private file contents do not persist",
-      "status": "passed",
-      "durationMs": 381,
-      "detail": {
-        "quality": 0.77,
-        "privateFilesAfterReload": 0
-      }
-    },
-    {
-      "name": "Failed dependency loading: Arabic error, retry does not reuse rejection",
-      "status": "passed",
-      "durationMs": 387,
-      "detail": [
-        "تعذّر تحميل مكتبة pdf-lib. يتطلب الاستخدام الأول اتصالًا بالإنترنت، وقد يمنع المتصفح التحميل المحلي. افتح التطبيق عبر HTTPS وأعد المحاولة.",
-        "تعذّر تحميل مكتبة pdf-lib. يتطلب الاستخدام الأول اتصالًا بالإنترنت، وقد يمنع المتصفح التحميل المحلي. افتح التطبيق عبر HTTPS وأعد المحاولة."
-      ]
-    },
-    {
-      "name": "Uploaded HTML/SVG cannot request remote private resources; no file uploads",
-      "status": "passed",
-      "durationMs": 0
-    },
-    {
-      "name": "No uncaught browser exceptions",
-      "status": "passed",
-      "durationMs": 0
-    }
-  ],
   "environment": {
     "platform": "linux",
     "release": "6.18.55",
@@ -560,41 +15,1287 @@
     "node": "v24.19.0",
     "browserExecutable": "/usr/bin/chromium",
     "headless": true,
-    "serving": "HTTP on 127.0.0.1 with a static Node test server",
-    "viewportTests": [
-      {
-        "width": 360,
-        "height": 800
-      },
-      {
-        "width": 412,
-        "height": 915
-      },
-      {
-        "width": 915,
-        "height": 412
-      },
-      {
-        "width": 800,
-        "height": 1280
-      },
-      {
-        "width": 1280,
-        "height": 800
-      }
-    ],
+    "serving": "Local HTTP static server at 127.0.0.1",
     "physicalAndroidDevice": false,
-    "touchHardwareEmulation": false
+    "touchHardwareEmulation": true,
+    "viewports": [
+      [
+        360,
+        800
+      ],
+      [
+        412,
+        915
+      ],
+      [
+        915,
+        412
+      ],
+      [
+        800,
+        1280
+      ],
+      [
+        1280,
+        800
+      ]
+    ]
   },
-  "measurementNotes": "Single headless workstation run; bootMs measures navigation through tool-registry readiness. No CPU throttling, peak-memory measurement, or physical Samsung/Android testing.",
+  "measurementNotes": "Headless Chromium on a Linux workstation; V2 suite enables touch API emulation. No CPU throttling, peak-memory measurement or physical Samsung/Android testing. Boot duration is navigation through ready tool registry from the preserved baseline suite.",
   "fileProtocolVerification": {
-    "status": "blocked-by-test-environment",
-    "error": "Chromium net::ERR_BLOCKED_BY_ADMINISTRATOR when navigating to file:///workspace/PDF/index.html",
-    "note": "The browser blocked navigation before the application could load. Core engine tests and the full interface were verified over local HTTP."
+    "status": "not-verified-in-this-run",
+    "note": "Core interface tests run over local HTTP. Native tools are designed for file://, but dependency/CDN and secure-context restrictions vary by browser. No offline service worker is included."
   },
   "testedArtifact": {
     "filename": "index.html",
-    "bytes": 246907,
-    "sha256": "86d7cd0f30b6528d654353af7c0dad1b50d1641d29cec791e86ec7cc65abd20c"
-  }
+    "bytes": 463718,
+    "sha256": "56a8e0db35ab8a6d400e8c9c88f684c187ffec344af309930c17ae5cd435b42c"
+  },
+  "suites": [
+    {
+      "id": "baseline",
+      "timestamp": "2026-10-19T00:55:32.823Z",
+      "mode": "production index.html",
+      "chromium": "154.0.8037.57",
+      "playwright": "1.62.1",
+      "cdn": "Live CDN",
+      "physicalDeviceTesting": false,
+      "bootMs": 322,
+      "passed": 44,
+      "failed": 0,
+      "results": [
+        {
+          "name": "Arabic RTL shell and dependency laziness",
+          "status": "passed",
+          "durationMs": 3,
+          "detail": {
+            "bootMs": 322,
+            "toolCount": 54
+          }
+        },
+        {
+          "name": "PNG → JPEG: valid encoding, Arabic filename",
+          "status": "passed",
+          "durationMs": 55,
+          "detail": {
+            "width": 640,
+            "height": 480,
+            "type": "image/jpeg",
+            "name": "صورة عربية-محول.jpg",
+            "bytes": [
+              255,
+              216,
+              255
+            ]
+          }
+        },
+        {
+          "name": "PNG → WebP: reopen actual image",
+          "status": "passed",
+          "durationMs": 39,
+          "detail": {
+            "width": 640,
+            "height": 480,
+            "type": "image/webp",
+            "signature": "WEBP"
+          }
+        },
+        {
+          "name": "Image resize, rotation, crop, compression and batch",
+          "status": "passed",
+          "durationMs": 149,
+          "detail": {
+            "resized": {
+              "width": 160,
+              "height": 120
+            },
+            "rotated": {
+              "width": 480,
+              "height": 640
+            },
+            "crop": {
+              "width": 100,
+              "height": 80
+            },
+            "low": 2984,
+            "high": 14983,
+            "batch": 2
+          }
+        },
+        {
+          "name": "Multiple images → PDF: parse all pages",
+          "status": "passed",
+          "durationMs": 208,
+          "detail": {
+            "pages": 2,
+            "size": 12091,
+            "type": "application/pdf"
+          }
+        },
+        {
+          "name": "PDF merge: preserves input/page order",
+          "status": "passed",
+          "durationMs": 14,
+          "detail": {
+            "pages": 3,
+            "widths": [
+              310,
+              320,
+              330
+            ]
+          }
+        },
+        {
+          "name": "PDF split and extract: parse generated outputs",
+          "status": "passed",
+          "durationMs": 32,
+          "detail": {
+            "widths": [
+              [
+                310
+              ],
+              [
+                320
+              ],
+              [
+                330
+              ]
+            ],
+            "groupCounts": [
+              2,
+              1
+            ],
+            "extractedWidths": [
+              330,
+              310
+            ]
+          }
+        },
+        {
+          "name": "PDF delete, reorder and rotate: validated page structures",
+          "status": "passed",
+          "durationMs": 10,
+          "detail": {
+            "deleted": [
+              {
+                "width": 310,
+                "rotation": 0
+              },
+              {
+                "width": 330,
+                "rotation": 0
+              }
+            ],
+            "reordered": [
+              {
+                "width": 330,
+                "rotation": 0
+              },
+              {
+                "width": 310,
+                "rotation": 0
+              },
+              {
+                "width": 320,
+                "rotation": 0
+              }
+            ],
+            "rotated": [
+              {
+                "width": 310,
+                "rotation": 0
+              },
+              {
+                "width": 320,
+                "rotation": 90
+              },
+              {
+                "width": 330,
+                "rotation": 0
+              }
+            ]
+          }
+        },
+        {
+          "name": "PDF rendering and embedded text extraction",
+          "status": "passed",
+          "durationMs": 417,
+          "detail": {
+            "text": "Embedded test text",
+            "dimensions": {
+              "width": 401,
+              "height": 566
+            },
+            "pages": 1
+          }
+        },
+        {
+          "name": "Malformed and empty PDF fail with Arabic errors",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": [
+            "تعذرت قراءة ملف PDF. قد يكون تالفًا أو يستخدم بنية غير مدعومة؛ جرّب فتحه في قارئ PDF وتصدير نسخة جديدة.",
+            "ملف PDF فارغ؛ اختر ملفًا يحتوي على صفحات."
+          ]
+        },
+        {
+          "name": "ZIP creation/extraction: UTF-8 filenames and byte equality",
+          "status": "passed",
+          "durationMs": 71,
+          "detail": {
+            "count": 2,
+            "names": [
+              "مجلد/رسالة عربية.txt",
+              "مجلد/binary.bin"
+            ]
+          }
+        },
+        {
+          "name": "ZIP selected extraction and rebundling",
+          "status": "passed",
+          "durationMs": 11,
+          "detail": {
+            "selectedCount": 1,
+            "repackedCount": 1
+          }
+        },
+        {
+          "name": "ZIP security: traversal, decompressed-size and entry limits",
+          "status": "passed",
+          "durationMs": 13,
+          "detail": [
+            "يحتوي الأرشيف على مسار غير آمن أو غير قابل للحفظ.",
+            "حجم الأرشيف يتجاوز حد الأمان المضبوط في الإعدادات.",
+            "عدد عناصر الأرشيف يتجاوز حد الأمان أو لا يطابق بنية الملف."
+          ]
+        },
+        {
+          "name": "CSV → JSON: BOM, quotes, embedded commas/newlines, delimiter detection",
+          "status": "passed",
+          "durationMs": 9,
+          "detail": {
+            "rows": 2
+          }
+        },
+        {
+          "name": "JSON → CSV round trip and spreadsheet formula protection",
+          "status": "passed",
+          "durationMs": 25,
+          "detail": {
+            "rows": 2
+          }
+        },
+        {
+          "name": "JSON validation and corrupt CSV rejection",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": [
+            "بيانات JSON غير صالحة. تحقق من الأقواس والفواصل وعلامات الاقتباس.",
+            "صياغة CSV غير صالحة: حقل مقتبس لم يُغلق."
+          ]
+        },
+        {
+          "name": "SHA-256: known vectors, streaming boundary and duplicate content",
+          "status": "passed",
+          "durationMs": 41,
+          "detail": {
+            "knownVectors": 3
+          }
+        },
+        {
+          "name": "Base64 binary round trip and invalid input rejection",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": {
+            "bytes": [
+              0,
+              255,
+              1,
+              128,
+              7
+            ],
+            "rejected": true,
+            "name": "مستعاد.bin"
+          }
+        },
+        {
+          "name": "XML validation and inert uploaded HTML",
+          "status": "passed",
+          "durationMs": 5,
+          "detail": {
+            "html": "نص آمن",
+            "dtdRejected": true
+          }
+        },
+        {
+          "name": "Image errors: corrupt, empty, unsupported and long filenames",
+          "status": "passed",
+          "durationMs": 19,
+          "detail": {
+            "errors": [
+              "محتوى الملف ليس صورة مدعومة. تحقّق من الصيغة أو من سلامة الملف.",
+              "الصورة فارغة أو غير قابلة للقراءة.",
+              "محتوى الملف ليس صورة مدعومة. تحقّق من الصيغة أو من سلامة الملف."
+            ],
+            "filenameLength": 130
+          }
+        },
+        {
+          "name": "Cancellation before processing: no output is returned",
+          "status": "passed",
+          "durationMs": 2,
+          "detail": [
+            "AbortError",
+            "AbortError",
+            "AbortError",
+            "AbortError"
+          ]
+        },
+        {
+          "name": "Image pixels: flip, JPEG background, inert SVG and EXIF orientation",
+          "status": "passed",
+          "durationMs": 20,
+          "detail": {
+            "flip": {
+              "width": 4,
+              "height": 2,
+              "p": [
+                0,
+                0,
+                255,
+                255
+              ]
+            },
+            "background": {
+              "width": 4,
+              "height": 2,
+              "p": [
+                0,
+                255,
+                1,
+                255
+              ]
+            },
+            "svg": {
+              "width": 20,
+              "height": 10,
+              "p": [
+                255,
+                0,
+                0,
+                255
+              ]
+            },
+            "svgExecuted": false,
+            "oriented": {
+              "width": 50,
+              "height": 100
+            }
+          }
+        },
+        {
+          "name": "ZIP corrupted CRC is rejected during extraction",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": "فشل التحقق من حجم الملف أو بصمته CRC32. الأرشيف تالف."
+        },
+        {
+          "name": "Audio: inspect, trim, adjust gain and reopen PCM WAV",
+          "status": "passed",
+          "durationMs": 83,
+          "detail": {
+            "before": 2,
+            "after": 1,
+            "bytes": 88244,
+            "rate": 44100,
+            "maximum": 5000
+          }
+        },
+        {
+          "name": "Video: native inspection and exact frame capture",
+          "status": "passed",
+          "durationMs": 50,
+          "detail": {
+            "duration": 2,
+            "width": 160,
+            "height": 90,
+            "invalidRejected": true
+          }
+        },
+        {
+          "name": "ZIP keeps legitimate empty entries and rejects conflicting names",
+          "status": "passed",
+          "durationMs": 9,
+          "detail": {
+            "emptyBytes": 0,
+            "allowEmpty": true,
+            "duplicateRejected": true
+          }
+        },
+        {
+          "name": "Text statistics, literal search, merge, split and encoding conversion",
+          "status": "passed",
+          "durationMs": 10,
+          "detail": {
+            "parts": 2,
+            "encoding": "مرحبا"
+          }
+        },
+        {
+          "name": "Arabic embedded PDF text: preserve words and render page",
+          "status": "passed",
+          "durationMs": 349,
+          "detail": {
+            "text": "نص عربي لاختبار معالجة المستندات",
+            "dimensions": {
+              "width": 401,
+              "height": 566
+            }
+          }
+        },
+        {
+          "name": "Legacy/UTF-16 intake exposes encoding conversion with the correct default",
+          "status": "passed",
+          "durationMs": 322,
+          "detail": {
+            "encodings": [
+              "windows-1256",
+              "utf-16le",
+              "utf-16be"
+            ],
+            "text": "مرحبا",
+            "modalDefault": "utf-16le"
+          }
+        },
+        {
+          "name": "Real upload → configure → process → valid browser download",
+          "status": "passed",
+          "durationMs": 216,
+          "detail": {
+            "suggestedFilename": "بيانات عربية-منسق.json"
+          }
+        },
+        {
+          "name": "Output filename editing survives queue rendering and corrects extension",
+          "status": "passed",
+          "durationMs": 83,
+          "detail": {
+            "correctedName": "اسم يدوي.json"
+          }
+        },
+        {
+          "name": "Queue progress keeps completed outputs and file-list DOM stable",
+          "status": "passed",
+          "durationMs": 18,
+          "detail": {
+            "fileStable": true,
+            "outputStable": true
+          }
+        },
+        {
+          "name": "Image exact-size controls produce the requested output dimensions",
+          "status": "passed",
+          "durationMs": 1707,
+          "detail": {
+            "width": 120,
+            "height": 60
+          }
+        },
+        {
+          "name": "Queue deduplicates maximal-length output names without losing extension",
+          "status": "passed",
+          "durationMs": 44,
+          "detail": {
+            "lengths": [
+              117,
+              118
+            ],
+            "unique": true
+          }
+        },
+        {
+          "name": "Queue cancellation during streaming work and queued execution",
+          "status": "passed",
+          "durationMs": 606,
+          "detail": {
+            "state": "cancelled"
+          }
+        },
+        {
+          "name": "Mobile/tablet responsive layout, orientation and RTL stability",
+          "status": "passed",
+          "durationMs": 3457,
+          "detail": {
+            "viewports": 5
+          }
+        },
+        {
+          "name": "Keyboard navigation and modal dismissal",
+          "status": "passed",
+          "durationMs": 162,
+          "detail": {
+            "keyboardFocusedTag": "BUTTON"
+          }
+        },
+        {
+          "name": "Binary recognition overrides misleading extension and MIME",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": {
+            "kind": "image",
+            "warnings": [
+              "الامتداد لا يطابق المحتوى المكتشف؛ تُقترح الأدوات حسب المحتوى.",
+              "نوع المتصفح يختلف عن توقيع المحتوى."
+            ],
+            "width": 640,
+            "unknown": "unknown",
+            "emptyKind": "empty",
+            "emptyWarnings": [
+              "الملف فارغ؛ تتاح أدوات الفحص والبصمة فقط."
+            ]
+          }
+        },
+        {
+          "name": "Batch browser download: ZIP has unique valid image results",
+          "status": "passed",
+          "durationMs": 397,
+          "detail": {
+            "count": 4,
+            "images": 2
+          }
+        },
+        {
+          "name": "Queue supports valid empty ZIP entries and sequential jobs",
+          "status": "passed",
+          "durationMs": 32,
+          "detail": [
+            {
+              "state": "completed",
+              "bytes": 0
+            },
+            {
+              "state": "completed",
+              "bytes": 116
+            }
+          ]
+        },
+        {
+          "name": "Theme/preferences persist; private file contents do not persist",
+          "status": "passed",
+          "durationMs": 429,
+          "detail": {
+            "quality": 0.77,
+            "privateFilesAfterReload": 0
+          }
+        },
+        {
+          "name": "Failed dependency loading: Arabic error, retry does not reuse rejection",
+          "status": "passed",
+          "durationMs": 463,
+          "detail": [
+            "تعذّر تحميل مكتبة pdf-lib. يتطلب الاستخدام الأول اتصالًا بالإنترنت، وقد يمنع المتصفح التحميل المحلي. افتح التطبيق عبر HTTPS وأعد المحاولة.",
+            "تعذّر تحميل مكتبة pdf-lib. يتطلب الاستخدام الأول اتصالًا بالإنترنت، وقد يمنع المتصفح التحميل المحلي. افتح التطبيق عبر HTTPS وأعد المحاولة."
+          ]
+        },
+        {
+          "name": "Uploaded HTML/SVG cannot request remote private resources; no file uploads",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "name": "No uncaught browser exceptions",
+          "status": "passed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "timestamp": "2026-10-19T00:55:42.855Z",
+      "mode": "production index.html V2 regression",
+      "chromium": "154.0.8037.57",
+      "playwright": "1.62.1",
+      "cdn": "Live CDN",
+      "physicalDeviceTesting": false,
+      "touchHardwareEmulation": true,
+      "passed": 48,
+      "failed": 0,
+      "results": [
+        {
+          "name": "V2 preserves every existing functional tool and Arabic RTL",
+          "status": "passed",
+          "durationMs": 9,
+          "detail": {
+            "preserved": 27,
+            "total": 54
+          }
+        },
+        {
+          "name": "V2 malformed saved activity cannot break startup or retain arbitrary stored fields",
+          "status": "passed",
+          "durationMs": 682,
+          "detail": {
+            "startupRecovered": true,
+            "validEntries": 1,
+            "arbitraryFieldsRemoved": true
+          }
+        },
+        {
+          "name": "V2 content recognition distinguishes bracketed CSV headers from actual mislabeled JSON",
+          "status": "passed",
+          "durationMs": 40,
+          "detail": {
+            "csvKind": "csv",
+            "jsonKind": "json",
+            "csvCompatible": true,
+            "jsonCompatible": false,
+            "data": [
+              {
+                "[phase]": "عربي",
+                "n": "1"
+              }
+            ]
+          }
+        },
+        {
+          "name": "V2 PDF organizer: selected order, rotation and invalid duplicate rejection",
+          "status": "passed",
+          "durationMs": 149,
+          "detail": {
+            "pages": [
+              {
+                "width": 330,
+                "rotation": 90
+              },
+              {
+                "width": 310,
+                "rotation": 180
+              }
+            ],
+            "duplicateRejected": true,
+            "cancelled": true
+          }
+        },
+        {
+          "name": "V2 PDF to images: every encoded image reopens and keeps selected page order",
+          "status": "passed",
+          "durationMs": 897,
+          "detail": {
+            "images": [
+              {
+                "width": 330,
+                "height": 600,
+                "type": "image/png",
+                "name": "صفحات_صفحة_003.png"
+              },
+              {
+                "width": 330,
+                "height": 639,
+                "type": "image/png",
+                "name": "صفحات_صفحة_001.png"
+              }
+            ],
+            "jpeg": {
+              "width": 320,
+              "height": 600,
+              "type": "image/jpeg"
+            }
+          }
+        },
+        {
+          "name": "V2 PDF information and editable metadata preserve real document structure",
+          "status": "passed",
+          "durationMs": 26,
+          "detail": {
+            "pages": 3,
+            "title": "وثيقة عربية",
+            "author": "مؤلف الاختبار"
+          }
+        },
+        {
+          "name": "V2 PDF page numbers and Arabic watermark change the output content",
+          "status": "passed",
+          "durationMs": 548,
+          "detail": {
+            "numberedPages": 3,
+            "changedPixels": 1926,
+            "dimensions": {
+              "width": 330,
+              "height": 639
+            }
+          }
+        },
+        {
+          "name": "V2 Arabic text cleaning is opt-in and applies selected transformations exactly",
+          "status": "passed",
+          "durationMs": 11,
+          "detail": {
+            "input": "أَهْـلاً، إختبار ١٢٣ ى",
+            "keep": "أَهْـلاً، إختبار ١٢٣ ى",
+            "clean": "اهلا، اختبار 123 ي"
+          }
+        },
+        {
+          "name": "V2 text cleanup and literal replacement preserve Arabic and avoid regex interpretation",
+          "status": "passed",
+          "durationMs": 11,
+          "detail": {
+            "clean": "\nب\na\nz",
+            "replaced": "$& جديد $& جديد A.* عربي"
+          }
+        },
+        {
+          "name": "V2 safe Markdown export creates real HTML without active uploaded content",
+          "status": "passed",
+          "durationMs": 6,
+          "detail": {
+            "name": "ملاحظات.html",
+            "title": "عنوان عربي",
+            "strong": "نص مهم",
+            "scripts": 0,
+            "remoteElements": 0,
+            "csp": "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"
+          }
+        },
+        {
+          "name": "V2 Arabic text to PDF creates valid pages with visible rasterized text",
+          "status": "passed",
+          "durationMs": 353,
+          "detail": {
+            "pages": 1,
+            "name": "عربي.pdf",
+            "width": 595.28,
+            "darkPixels": 895
+          }
+        },
+        {
+          "name": "V2 DOCX generation and extraction round trip Arabic text through real OOXML",
+          "status": "passed",
+          "durationMs": 97,
+          "detail": {
+            "entries": 3,
+            "bidi": true,
+            "extracted": "عنوان عربي\nسطر ثان & <قيم>\nEnglish 123"
+          }
+        },
+        {
+          "name": "V2 audio edits: fades, normalization, mono conversion and requested sample rate",
+          "status": "passed",
+          "durationMs": 87,
+          "detail": {
+            "format": "RIFF",
+            "duration": 1,
+            "sampleRate": 16000,
+            "channels": 1,
+            "samples": 16000,
+            "peak": 32112,
+            "early": 68247,
+            "middle": 2636869,
+            "tail": 69495,
+            "cancelled": true
+          }
+        },
+        {
+          "name": "V2 video thumbnails: individual frames and contact sheet reopen with exact layout",
+          "status": "passed",
+          "durationMs": 62,
+          "detail": [
+            {
+              "width": 356,
+              "height": 272,
+              "type": "image/png",
+              "name": "فيديو عربي-لوحة-لقطات.png"
+            },
+            {
+              "width": 160,
+              "height": 90,
+              "type": "image/png",
+              "name": "فيديو عربي-لقطة-1-0.00.png"
+            },
+            {
+              "width": 160,
+              "height": 90,
+              "type": "image/png",
+              "name": "فيديو عربي-لقطة-2-0.50.png"
+            },
+            {
+              "width": 160,
+              "height": 90,
+              "type": "image/png",
+              "name": "فيديو عربي-لقطة-3-1.00.png"
+            },
+            {
+              "width": 160,
+              "height": 90,
+              "type": "image/png",
+              "name": "فيديو عربي-لقطة-4-1.50.png"
+            }
+          ]
+        },
+        {
+          "name": "V2 audio merge preserves ordered source samples in one valid WAV",
+          "status": "passed",
+          "durationMs": 63,
+          "detail": {
+            "channels": 1,
+            "sampleRate": 16000,
+            "frames": 64000,
+            "duration": 4,
+            "firstPeak": 5470,
+            "secondPeak": 0
+          }
+        },
+        {
+          "name": "V2 QR generation round trips Arabic through an independent PNG decoder",
+          "status": "passed",
+          "durationMs": 716,
+          "detail": {
+            "roundTrips": 3,
+            "arabicMaxUTF8Bytes": 1200,
+            "limitRejected": true,
+            "cancelled": true,
+            "scannerAvailable": false
+          }
+        },
+        {
+          "name": "V2 every available tool has a direct file picker inside its dialog",
+          "status": "passed",
+          "durationMs": 106,
+          "detail": {
+            "count": 53,
+            "failures": []
+          }
+        },
+        {
+          "name": "V2 incompatible dialog input recovers locally and preserves unrelated workspace files",
+          "status": "passed",
+          "durationMs": 178,
+          "detail": {
+            "names": [
+              "بيانات خاصة.json",
+              "صورة من داخل الأداة.png"
+            ],
+            "rows": 1,
+            "open": true
+          }
+        },
+        {
+          "name": "V2 tool input ordering, replacement and removal work without leaving the dialog",
+          "status": "passed",
+          "durationMs": 328,
+          "detail": {
+            "reordered": true,
+            "replaced": true,
+            "removed": true,
+            "unrelatedPreserved": true
+          }
+        },
+        {
+          "name": "V2 incompatible in-dialog replacement keeps the original compatible file available",
+          "status": "passed",
+          "durationMs": 117,
+          "detail": {
+            "originalPreserved": true,
+            "rejectedCandidateExplained": true,
+            "dialogUsable": true
+          }
+        },
+        {
+          "name": "V2 ZIP compression, integrity verification and high-ratio fallback preserve bytes",
+          "status": "passed",
+          "durationMs": 119,
+          "detail": {
+            "stored": 88056,
+            "compressed": 7376,
+            "method": 8,
+            "safeMethod": 0,
+            "safeBytes": 524288
+          }
+        },
+        {
+          "name": "V2 ZIP selected entry rename preserves folders and rejects traversal",
+          "status": "passed",
+          "durationMs": 17,
+          "detail": {
+            "names": [
+              "مجلد/اسم جديد.txt"
+            ],
+            "rejected": true
+          }
+        },
+        {
+          "name": "V2 SHA-512 matches independent known vectors including empty input",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": {
+            "knownVectors": 3
+          }
+        },
+        {
+          "name": "V2 batch rename keeps binary contents, extensions and unique Arabic names in ZIP",
+          "status": "passed",
+          "durationMs": 12,
+          "detail": {
+            "names": [
+              "مشروع-07_ملف عربي-نسخة.txt",
+              "مشروع-08_ملف عربي-نسخة.txt",
+              "مشروع-09_ملف عربي-نسخة.txt"
+            ],
+            "contents": [
+              "first",
+              "second",
+              ""
+            ],
+            "archiveNames": [
+              "مشروع-07_ملف عربي-نسخة.txt",
+              "مشروع-08_ملف عربي-نسخة.txt",
+              "مشروع-09_ملف عربي-نسخة.txt"
+            ],
+            "emptyAllowed": true
+          }
+        },
+        {
+          "name": "V2 file inspector reports real binary signature and detected type despite misleading extension",
+          "status": "passed",
+          "durationMs": 1008,
+          "detail": {
+            "signaturePresent": true,
+            "files": 2
+          }
+        },
+        {
+          "name": "V2 URL and HTML entity codecs round trip Arabic without navigating or interpreting HTML",
+          "status": "passed",
+          "durationMs": 5,
+          "detail": {
+            "codecs": 2,
+            "arabicRoundTrips": true,
+            "invalidRejected": true
+          }
+        },
+        {
+          "name": "V2 Data Lab applies edits, filtering, numeric sorting, column mapping and deduplication",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": {
+            "rows": 2,
+            "columns": [
+              "النتيجة",
+              "الاسم"
+            ],
+            "duplicateRemoved": 1,
+            "formulaProtected": true
+          }
+        },
+        {
+          "name": "V2 NDJSON interchange keeps nested values and reports malformed source line",
+          "status": "passed",
+          "durationMs": 5,
+          "detail": {
+            "lines": 4,
+            "invalidLineReported": true,
+            "duplicateKeysRejected": true
+          }
+        },
+        {
+          "name": "V2 data batch isolates corrupt member while preserving valid outputs",
+          "status": "passed",
+          "durationMs": 3,
+          "detail": {
+            "outputs": 2,
+            "isolatedErrors": 1
+          }
+        },
+        {
+          "name": "V2 structured-data guards reject depth, precision loss and excessive formatted output",
+          "status": "passed",
+          "durationMs": 82,
+          "detail": {
+            "rejectedCases": 4,
+            "prototypePreservedAsData": true
+          }
+        },
+        {
+          "name": "V2 cancelled pending jobs release source references and never expose outputs",
+          "status": "passed",
+          "durationMs": 4,
+          "detail": {
+            "state": "cancelled",
+            "files": 0,
+            "records": 0,
+            "outputs": 0,
+            "aborted": true
+          }
+        },
+        {
+          "name": "V2 partial batches track exact source indices and retry only the failed duplicate filename",
+          "status": "passed",
+          "durationMs": 228,
+          "detail": {
+            "successfulOutputs": 2,
+            "failedIndex": 1,
+            "perFileStates": [
+              "completed",
+              "failed",
+              "completed"
+            ],
+            "retryInputs": 1,
+            "retryState": "failed"
+          }
+        },
+        {
+          "name": "V2 BMP encoder writes a valid BMP with correct geometry and pixel content",
+          "status": "passed",
+          "durationMs": 15,
+          "detail": {
+            "signature": 19778,
+            "recordedSize": 342,
+            "bytes": 342,
+            "width": 12,
+            "height": 8,
+            "decodedWidth": 12,
+            "pixel": [
+              128,
+              64,
+              32,
+              255
+            ],
+            "type": "image/bmp"
+          }
+        },
+        {
+          "name": "V2 advanced image controls change real pixels, alpha and aspect ratio",
+          "status": "passed",
+          "durationMs": 65,
+          "detail": {
+            "original": [
+              128,
+              64,
+              32,
+              255
+            ],
+            "bright": [
+              192,
+              96,
+              48,
+              255
+            ],
+            "exposure": [
+              255,
+              128,
+              64,
+              255
+            ],
+            "gray": [
+              75,
+              75,
+              75,
+              255
+            ],
+            "saturation": [
+              75,
+              75,
+              75,
+              255
+            ],
+            "sepiaChanged": 19200,
+            "contrastChanged": 9600,
+            "alpha": 0,
+            "border": [
+              255,
+              0,
+              0,
+              255
+            ],
+            "aspect": {
+              "width": 80,
+              "height": 80
+            },
+            "sharpenChanged": 234,
+            "watermarkChanged": 1740
+          }
+        },
+        {
+          "name": "V2 image batches isolate damaged images and retain valid encoded outputs",
+          "status": "passed",
+          "durationMs": 12,
+          "detail": {
+            "successes": 2,
+            "isolatedFailures": 1
+          }
+        },
+        {
+          "name": "V2 images to PDF keeps custom page sizes, selected rotations and source resolution",
+          "status": "passed",
+          "durationMs": 21,
+          "detail": {
+            "pages": [
+              {
+                "width": 283.46456692913387,
+                "height": 425.1968503937008
+              },
+              {
+                "width": 283.46456692913387,
+                "height": 425.1968503937008
+              }
+            ],
+            "images": [
+              {
+                "width": 80,
+                "height": 120
+              },
+              {
+                "width": 40,
+                "height": 60
+              }
+            ],
+            "name": "صور مرتبة.pdf"
+          }
+        },
+        {
+          "name": "V2 functional image and data workflows produce valid final archives and honour cancellation",
+          "status": "passed",
+          "durationMs": 33,
+          "detail": {
+            "dims": [
+              {
+                "width": 60,
+                "height": 40
+              },
+              {
+                "width": 60,
+                "height": 40
+              }
+            ],
+            "names": [
+              "صورة اختبار-جاهزة.webp",
+              "2_صورة اختبار-جاهزة.webp"
+            ],
+            "data": [
+              {
+                "الاسم": "علي",
+                "القيمة": "2"
+              }
+            ],
+            "cancelled": true
+          }
+        },
+        {
+          "name": "V2 smart search finds Arabic synonyms, English formats and categories immediately",
+          "status": "passed",
+          "durationMs": 144,
+          "detail": {
+            "searches": 5
+          }
+        },
+        {
+          "name": "V2 compact cards, favorites and recent tool identifiers persist without source content",
+          "status": "passed",
+          "durationMs": 374,
+          "detail": {
+            "favoritePersisted": true,
+            "recentPersisted": true,
+            "sourcePersisted": false
+          }
+        },
+        {
+          "name": "V2 live image comparison encodes an output and exposes an accessible working slider",
+          "status": "passed",
+          "durationMs": 141,
+          "detail": {
+            "images": 2,
+            "clip": "inset(0px 20% 0px 0px)",
+            "sizeReported": true
+          }
+        },
+        {
+          "name": "V2 quality controls retain the saved value and update exact percentage readouts",
+          "status": "passed",
+          "durationMs": 66,
+          "detail": {
+            "saved": 0.85,
+            "selected": 0.73,
+            "displayed": "73%"
+          }
+        },
+        {
+          "name": "V2 audio waveform accepts range and keyboard alternatives with large touch handles",
+          "status": "passed",
+          "durationMs": 256,
+          "detail": {
+            "end": "1.5",
+            "canvasWidth": 340,
+            "handles": [
+              44,
+              44
+            ]
+          }
+        },
+        {
+          "name": "V2 Data Lab editable table exports the actual edited cell through the processing queue",
+          "status": "passed",
+          "durationMs": 200,
+          "detail": {
+            "state": "completed",
+            "firstName": "اسم محرر"
+          }
+        },
+        {
+          "name": "V2 PDF visual organizer exports the actual selected order and rotation",
+          "status": "passed",
+          "durationMs": 286,
+          "detail": [
+            {
+              "width": 330,
+              "rotation": 90
+            },
+            {
+              "width": 310,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "name": "V2 searchable archive picker exports the renamed selected entry",
+          "status": "passed",
+          "durationMs": 151,
+          "detail": {
+            "state": "completed",
+            "name": "مجلد__اسم من الواجهة.txt",
+            "path": "مجلد/اسم من الواجهة.txt",
+            "bytes": 87900
+          }
+        },
+        {
+          "name": "V2 QR dialog supports direct text with zero source files and validates the generated PNG",
+          "status": "passed",
+          "durationMs": 201,
+          "detail": {
+            "state": "completed",
+            "text": "رمز من الواجهة 123"
+          }
+        },
+        {
+          "name": "V2 mobile and tablet sections and populated tool dialogs stay inside the viewport",
+          "status": "passed",
+          "durationMs": 974,
+          "detail": {
+            "sizes": 5,
+            "viewsPerSize": 8,
+            "dialogChecks": 5
+          }
+        },
+        {
+          "name": "V2 has no uncaught runtime errors or non-GET file requests",
+          "status": "passed",
+          "durationMs": 0
+        }
+      ],
+      "testedArtifact": {
+        "filename": "index.html",
+        "bytes": 463718,
+        "sha256": "56a8e0db35ab8a6d400e8c9c88f684c187ffec344af309930c17ae5cd435b42c"
+      }
+    }
+  ]
 }

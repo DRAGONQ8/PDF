@@ -12,6 +12,7 @@ const dependencies = [
   ['pdfjs-dist@5.7.284/legacy/build/pdf.min.mjs', 'pdf.min.mjs', 'WZ19eSKLd5nvuF6gSf5+dWLC1OM7omDgxo0gENWkgmOr43sLyle/LJp+TKHjDAKY', '/workspace/deps/pdf.min.mjs'],
   ['fflate@0.8.2/umd/index.js', 'fflate.min.js', 'DT0Ls0mO7JmjTnT+oBuMhEJzYJO1zUqzuuMXNdnOmOQRIpN2BgSjvBV/j50NngIT', '/workspace/deps/zip.js'],
   ['pdfjs-dist@5.7.284/legacy/build/pdf.worker.min.mjs', 'pdf.worker.min.mjs', 'XQpM4ft9oqgzszJDEejhnb/lm8/sxo2oTDykD8DHEXahzhSdDUhNYfrnJ/4ndOpb', '/workspace/deps/pdf.worker.min.mjs'],
+  ['qrcode-generator@1.4.4/qrcode.js', 'qrcode.js', '8FWZA6BGMXhsfO+BLtrJK0We6gg5o1JyO8xQm6peWDEUs17ACA5ziE/NIAkl9z2k', '/workspace/v2parts/qrcode-1.4.4.js'],
 ];
 for (const [url, name, expectedHash, existing] of dependencies) {
   const filename = path.join(directory, name);

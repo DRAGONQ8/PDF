@@ -1,13 +1,16 @@
 {
   "name": "ai-transform-hub",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Single-file Arabic browser file workspace; Node is only used for development tests.",
   "scripts": {
-    "test": "node tests/browser.test.cjs",
-    "test:offline-cdn": "node tests/prepare-cdn.cjs && HUB_TEST_CACHE_CDN=1 node tests/browser.test.cjs"
+    "test": "node tests/run.cjs",
+    "test:baseline": "node tests/browser.test.cjs",
+    "test:v2": "node tests/v2.test.cjs",
+    "test:offline-cdn": "node tests/prepare-cdn.cjs && HUB_TEST_CACHE_CDN=1 node tests/run.cjs"
   },
   "devDependencies": {
+    "jsqr": "1.4.0",
     "playwright": "1.62.1"
   }
 }
